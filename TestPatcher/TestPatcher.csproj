@@ -6,7 +6,7 @@
 
     <ItemGroup>
         <PackageReference Include="Mutagen.Bethesda" Version="0.17.0.0" />
-        <PackageReference Include="Mutagen.Bethesda.Synthesis" Version="0.8.0" />
+        <PackageReference Include="Mutagen.Bethesda.Synthesis" Version="0.8.1" />
     </ItemGroup>
 
 </Project>
