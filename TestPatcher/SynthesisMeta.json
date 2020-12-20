@@ -1,6 +1,10 @@
 {
   "Nickname": "Nog's Test Patcher",
-  "HideByDefault": true,
+  "Visibility": "Exclude",
   "OneLineDescription": "Testing123",
-  "LongDescription": "Just testing some things."
+  "LongDescription": "Just testing some things.",
+  "PreferredAutoVersioning": "Default",
+  "RequiredMods": [
+    "test.esl"
+  ]
 }
