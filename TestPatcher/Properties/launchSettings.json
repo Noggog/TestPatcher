@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TestPatcher": {
+      "commandName": "Project",
+      "commandLineArgs": "check-runnability --DataFolderPath D:\\\\Games\\\\steamapps\\\\common\\\\Skyrim Special Edition\\\\Data --GameRelease SkyrimSE --LoadOrderFilePath C:\\\\Users\\\\Levia\\\\AppData\\\\Local\\\\Temp\\\\Synthesis\\\\RunnabilityChecks\\\\idami3zx.lbb\\\\epy1cakr.0vz"
+    }
+  }
+}
