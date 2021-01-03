@@ -26,7 +26,9 @@ namespace TestPatcher
 
         public static async Task RunnabilityCheck(IRunnabilityState state)
         {
-            state.LoadOrder.AssertHasMod(ModKey.FromNameAndExtension("test.esl"));
+            state.LoadOrder.AssertHasMods(
+                ModKey.FromNameAndExtension("test.esl"),
+                ModKey.FromNameAndExtension("test2.esl"));
         }
     }
 }
