@@ -15,7 +15,14 @@ namespace TestPatcher
             var ret = await SynthesisPipeline.Instance
                 .AddRunnabilityCheck(RunnabilityCheck)
                 .AddPatch<ISkyrimMod, ISkyrimModGetter>(RunPatch)
-                .Run(args);
+                .Run(args, new RunPreferences()
+                {
+                    ActionsForEmptyArgs = new RunDefaultPatcher()
+                    {
+                        IdentifyingModKey = "YourPatcher.esp",
+                        TargetRelease = GameRelease.SkyrimSE,
+                    }
+                });
             return ret;
         }
 

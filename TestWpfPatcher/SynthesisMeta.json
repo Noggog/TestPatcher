@@ -1,0 +1,10 @@
+{
+  "Nickname": "Nog's Test WPF Patcher",
+  "Visibility": "Exclude",
+  "OneLineDescription": "Testing123",
+  "LongDescription": "Just testing some things.",
+  "PreferredAutoVersioning": "Default",
+  "RequiredMods": [
+    "test.esl"
+  ]
+}
