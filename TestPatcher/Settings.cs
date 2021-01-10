@@ -8,12 +8,12 @@ namespace TestPatcher
 {
     public record Settings
     {
-        public bool MyBool;
+        public bool MyBool = true;
         public List<bool> MyBools = new List<bool>();
-        public int MyInt;
+        public int MyInt = 1;
         public List<int> MyInts = new List<int>();
         public HashSet<int> MyUniqueInts = new HashSet<int>();
-        public double MyDouble;
+        public double MyDouble = 2.3;
         public List<double> MyDoubles = new List<double>();
         public HashSet<double> MyUniqueDoubles = new HashSet<double>();
         public SubSetting MySubsetting = new SubSetting();
