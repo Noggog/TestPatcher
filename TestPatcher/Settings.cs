@@ -8,6 +8,7 @@ namespace TestPatcher
 {
     public record Settings
     {
+        public bool ThrowException = false;
         public bool MyBool = true;
         public List<bool> MyBools = new List<bool>();
         public int MyInt = 1;
