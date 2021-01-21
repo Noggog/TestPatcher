@@ -1,4 +1,6 @@
-﻿using Noggog;
+﻿using Mutagen.Bethesda;
+using Mutagen.Bethesda.Skyrim;
+using Noggog;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -15,6 +17,15 @@ namespace TestPatcher
         public int MyInt = 1;
         public List<int> MyInts = new List<int>();
         public HashSet<int> MyUniqueInts = new HashSet<int>();
+        public ModKey ModKey;
+        public List<ModKey> ModKeys = new List<ModKey>();
+        public HashSet<ModKey> UniqueModKeys = new HashSet<ModKey>();
+        public FormKey FormKey;
+        public List<FormKey> FormKeys = new List<FormKey>();
+        public HashSet<FormKey> UniqueFormKeys = new HashSet<FormKey>();
+        public FormLink<IArmorGetter> ArmorFormLink;
+        public List<FormLink<IArmorGetter>> ArmorFormLinks = new List<FormLink<IArmorGetter>>();
+        public HashSet<FormLink<IArmorGetter>> ArmorUniqueFormLinks = new HashSet<FormLink<IArmorGetter>>();
         public short MyShort = 1;
         public List<short> MyShorts = new List<short>();
         public HashSet<short> MyUniqueShorts = new HashSet<short>();
@@ -49,5 +60,6 @@ namespace TestPatcher
     public record SubSetting
     {
         public int ASetting;
+        public ModKey AModKey;
     }
 }
