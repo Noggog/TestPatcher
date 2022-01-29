@@ -5,6 +5,7 @@ using Mutagen.Bethesda;
 using Mutagen.Bethesda.Synthesis;
 using Mutagen.Bethesda.Skyrim;
 using System.Threading.Tasks;
+using Mutagen.Bethesda.Plugins;
 
 namespace TestPatcher
 {

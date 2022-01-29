@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
+using Mutagen.Bethesda.Plugins;
 
 namespace TestPatcher
 {
@@ -41,7 +42,7 @@ namespace TestPatcher
         public HashSet<int> MyUniqueInts = new HashSet<int>();
 
         [SynthesisOrder]
-        public ModKey ModKey;
+        public ModKey ModKey = ModKey.FromNameAndExtension("MyMod.esp");
 
         [SynthesisOrder]
         public List<ModKey> ModKeys = new List<ModKey>();
@@ -53,7 +54,7 @@ namespace TestPatcher
         public FormKey FormKey;
 
         [SynthesisOrder]
-        public FormKey FormKeyUsingLib = Skyrim.Armor.ArmorBladesBoots;
+        public FormKey FormKeyUsingLib = Skyrim.Armor.ArmorBladesBoots.FormKey;
 
         [SynthesisOrder]
         public List<FormKey> FormKeys = new List<FormKey>();
@@ -61,15 +62,15 @@ namespace TestPatcher
         [SynthesisOrder]
         public List<FormKey> FormKeysUsingLib = new List<FormKey>()
         {
-            Skyrim.Armor.ArmorBladesBoots,
-            Skyrim.Armor.ArmorBladesCuirass
+            Skyrim.Armor.ArmorBladesBoots.FormKey,
+            Skyrim.Armor.ArmorBladesCuirass.FormKey
         };
 
         [SynthesisOrder]
         public HashSet<FormKey> UniqueFormKeys = new HashSet<FormKey>();
 
         [SynthesisOrder]
-        public FormLink<IArmorGetter> ArmorFormLink;
+        public FormLink<IArmorGetter> ArmorFormLink = new();
 
         [SynthesisOrder]
         public List<FormLink<IArmorGetter>> ArmorFormLinks = new List<FormLink<IArmorGetter>>();
@@ -197,7 +198,7 @@ namespace TestPatcher
         public Dictionary<HelloEnum, int> StaticEnumSimpleDictionary = new Dictionary<HelloEnum, int>();
 
         [SynthesisOrder]
-        [SynthesisStaticEnumDictionary(false)]
+        [SynthesisStaticEnumDictionary]
         public Dictionary<HelloEnum, SubSetting> FlexibleEnumSubclassDictionary = new Dictionary<HelloEnum, SubSetting>()
         {
             { HelloEnum.Bonjour, new SubSetting()
@@ -207,7 +208,7 @@ namespace TestPatcher
         };
 
         [SynthesisOrder]
-        [SynthesisStaticEnumDictionary(false)]
+        [SynthesisStaticEnumDictionary]
         public Dictionary<HelloEnum, int> FlexibleEnumSimpleDictionary = new Dictionary<HelloEnum, int>()
         {
             { HelloEnum.Bonjour, 14 }
