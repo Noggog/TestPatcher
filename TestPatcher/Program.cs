@@ -6,6 +6,7 @@ using Mutagen.Bethesda.Synthesis;
 using Mutagen.Bethesda.Skyrim;
 using System.Threading.Tasks;
 using Mutagen.Bethesda.Plugins;
+using Mutagen.Bethesda.Plugins.Order;
 
 namespace TestPatcher
 {
@@ -43,9 +44,10 @@ namespace TestPatcher
 
         public static async Task RunnabilityCheck(IRunnabilityState state)
         {
-            state.LoadOrder.AssertHasMods(
-                ModKey.FromNameAndExtension("test.esl"),
-                ModKey.FromNameAndExtension("test2.esl"));
+            // ILoadOrderGetter<IModListingGetter> test = state.LoadOrder;
+                       // HasModsMixIn.AssertModsExist(state.LoadOrder,
+                       //     ModKey.FromNameAndExtension("test.esl"),
+                       //     ModKey.FromNameAndExtension("test2.esl"));
         }
     }
 }
